@@ -161,6 +161,13 @@ public final class HttpRequest {
                             && (statusCode.startsWith("4") || statusCode.startsWith("5"))) {
                         if (ACRA.DEV_LOGGING)
                             ACRA.log.d(ACRA.LOG_TAG, "Could not send HttpPost : " + httpRequest);
+
+                        if (ACRA.DEV_LOGGING) {
+                            final String respContent = EntityUtils.toString(response.getEntity());
+                            ACRA.log.d(ACRA.LOG_TAG,
+                                    "HttpResponse Content : " + respContent);
+                        }
+
                         throw new IOException("Host returned error code " + statusCode);
                     }
                 }
