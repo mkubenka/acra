@@ -136,7 +136,7 @@ public class SentrySender implements ReportSender {
      */
     public String getTimestampString() {
         TimeZone tz = TimeZone.getTimeZone("UTC");
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mmZ");
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
         df.setTimeZone(tz);
         return df.format(new Date());
     }
