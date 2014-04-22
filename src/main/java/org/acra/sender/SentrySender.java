@@ -122,8 +122,8 @@ public class SentrySender implements ReportSender {
 		 * sentry_key=<public api key>, sentry_secret=<secret api key>
 		 */
         StringBuilder header = new StringBuilder();
-        header.append("Sentry sentry_version=3");
-        header.append(",sentry_client=ACRA/4.5.0-Sages");
+        header.append("Sentry sentry_version=4");
+        header.append(",sentry_client=ACRA/5.0.0");
         header.append(",sentry_key=").append(config.getPublicKey());
         header.append(",sentry_secret=").append(config.getSecretKey());
         return header.toString();
