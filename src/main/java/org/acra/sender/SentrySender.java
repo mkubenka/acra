@@ -66,10 +66,10 @@ public class SentrySender implements ReportSender {
     }
 
     public SentrySender() {
-        if (ACRA.getConfig().formKey() == null) {
+        if (ACRA.getConfig().formUri() == null) {
             return;
         }
-        config = new SentryConfig(ACRA.getConfig().formKey());
+        config = new SentryConfig(ACRA.getConfig().formUri());
     }
 
     @Override
