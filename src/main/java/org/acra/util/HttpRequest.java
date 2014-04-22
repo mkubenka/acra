@@ -159,8 +159,8 @@ public final class HttpRequest {
                                                   // report has been received
                                                   // already. So we can discard it.
                             && !statusCode.equals("403") // a 403 error code is an explicit data validation refusal
-                            // from the server. The request must not be repeated.
-                            // Discard it.
+                                                         // from the server. The request must not be repeated.
+                                                         // Discard it.
                             && (statusCode.startsWith("4") || statusCode.startsWith("5"))) {
                         if (ACRA.DEV_LOGGING) {
                             ACRA.log.d(ACRA.LOG_TAG, "Could not send HttpPost : " + httpRequest);
@@ -170,7 +170,6 @@ public final class HttpRequest {
                             ACRA.log.d(ACRA.LOG_TAG,
                                     "HttpResponse Content : " + respContent.substring(0, Math.min(respContent.length(), 200)));
                         }
-
                         throw new IOException("Host returned error code " + statusCode);
                     }
                 }
