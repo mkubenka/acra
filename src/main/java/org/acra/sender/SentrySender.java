@@ -259,7 +259,9 @@ public class SentrySender implements ReportSender {
 
         for (ReportField originalKey : fields) {
             result.put(originalKey.toString(), report.getProperty(originalKey));
-            ACRA.log.d(ACRA.LOG_TAG, originalKey.toString() + ": " + report.getProperty(originalKey));
+
+            if (ACRA.DEV_LOGGING)
+                ACRA.log.d(ACRA.LOG_TAG, originalKey.toString() + ": " + report.getProperty(originalKey));
         }
         return result;
     }
