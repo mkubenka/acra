@@ -107,7 +107,7 @@
                     <target>1.6</target>
 					<showWarnings>true</showWarnings>
                     <compilerArguments>
-                        <bootclasspath>c:/Program Files/android/sdk/platforms/android-${android.version}/android.jar</bootclasspath>
+                        <bootclasspath>${env.ANDROID_HOME}/platforms/android-${android.version}/android.jar</bootclasspath>
                     </compilerArguments>
 				</configuration>
 			</plugin>
